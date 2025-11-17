@@ -6,9 +6,3 @@ variable "prefix" {
     EOT
     type = string
 }
-
-variable "protect" {
-    description = "Whether to prevent the destruction of the state bucket"
-    type = bool
-    default = true
-}
