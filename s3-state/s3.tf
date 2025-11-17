@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "terraform_state" {
     bucket = "${var.prefix}-terraform-state"
 
-    lifecycle = {
+    lifecycle {
         prevent_destroy = var.protect
     }
 }
