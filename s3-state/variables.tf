@@ -2,7 +2,7 @@ variable "prefix" {
     description = <<-EOT
       A prefix that will be prepended to the names of all created resources.
 
-      This will create a s3 bucket called $prefix-terraform-state and a dynamodb table called $prefix-terraform-state-locks
+      This will create a s3 bucket called $prefix-terraform-state.
     EOT
     type = string
 }
