@@ -2,11 +2,12 @@
 resource "aws_cloudwatch_metric_alarm" "high_cpu" {
     alarm_name = "${var.db_identifier}-high-cpu"
     alarm_description = "Triggers when the RDS CPU utilization rises above 80%"
-    namespace = "AWS/RDS"
 
     evaluation_periods = 3
     period = 60
 
+    namespace = "AWS/RDS"
+    metric_name = "CPUUtilization"
     statistic = "Average"
     comparison_operator = "GreaterThanThreshold"
     threshold = 80
