@@ -16,7 +16,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
         DBInstanceIdentifier = var.db_identifier
     }
 
-    treat_missing_data = "good"
+    treat_missing_data = "notBreaching"
 
     alarm_actions = [aws_sns_topic.alerts.arn]
     ok_actions = [aws_sns_topic.alerts.arn]
