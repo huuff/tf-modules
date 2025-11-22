@@ -79,7 +79,7 @@ resource "aws_cloudwatch_metric_alarm" "low_memory" {
     namespace = "AWS/RDS"
     metric_name = "FreeableMemory"
     statistic = "Average"
-    comparison_operator = "LowerThanThreshold"
+    comparison_operator = "LessThanThreshold"
     threshold = 67108864
 
     dimensions = {
@@ -102,7 +102,7 @@ resource "aws_cloudwatch_metric_alarm" "low_disk" {
     namespace = "AWS/RDS"
     metric_name = "FreeStorageSpace"
     statistic = "Average"
-    comparison_operator = "LowerThanThreshold"
+    comparison_operator = "LessThanThreshold"
     threshold = 2147483648
 
     dimensions = {
